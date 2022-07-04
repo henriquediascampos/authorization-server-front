@@ -1,0 +1,11 @@
+{
+    "recommendations": [
+        "esbenp.prettier-vscode",
+        "dbaeumer.vscode-eslint",
+        "steoates.autoimport",
+        "oderwat.indent-rainbow",
+        "jawandarajbir.react-vscode-extension-pack",
+        "xabikos.reactsnippets",
+        "EditorConfig.EditorConfig"
+    ]
+}
