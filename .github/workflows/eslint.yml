@@ -31,8 +31,11 @@ jobs:
 
       - name: Install ESLint
         run: |
+          npm i eslint": "^8.19.0
+          npm i eslint-plugin-react@^7.30.1
           npm i @typescript-eslint/eslint-plugin@^5.30.4
           npm i @typescript-eslint/parser@^5.30.4
+          
 
       - name: Run ESLint
         run: npx eslint .
