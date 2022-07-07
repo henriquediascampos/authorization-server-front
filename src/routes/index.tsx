@@ -1,20 +1,11 @@
-import { Button } from '@mui/material';
 import { Navigate, Route, Routes } from 'react-router-dom';
-import { useAppThemeContext } from '../shared/contexts/ThemeContext';
+import { Login } from '../pages/login/Login';
 
 export function AppRoutes() {
-    const { toggleTheme } = useAppThemeContext();
-
     return (
         <Routes>
-            <Route
-                path="/login"
-                element={
-                    <Button variant="contained" color="primary" onClick={toggleTheme}>
-                        login
-                    </Button>
-                }
-            />
+            <Route path="/login" element={<Login />} />
+
             <Route path="/sign-up" element={<p>login</p>} />
             <Route path="/logout" element={<p>login</p>} />
             <Route path="/email-confirmation" element={<p>login</p>} />

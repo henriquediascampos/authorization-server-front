@@ -1,0 +1,43 @@
+:root {
+    --primary: #328993;
+    --accent: #32936c;
+    --warn: 328993;
+    --error: 328993;
+}
+
+.body-template {
+    flex: none;
+    /* transition: 1.9s; */
+    background-size: 250% auto;
+    place-content: center center;
+    background-image: linear-gradient(to right, var(--primary) 0%, #00cdac 51%, var(--primary) 100%);
+    /* background-image: linear-gradient(
+        90deg,
+        rgba(50, 137, 147, 1) 0%,
+        rgba(0, 205, 172, 1) 50%,
+        rgba(47, 255, 221, 1) 51%,
+        rgba(0, 205, 172, 1) 52%,
+        rgba(50, 137, 147, 1) 100%
+    ); */
+
+    align-items: center;
+    background-position: no-repeat;
+    height: 100vh;
+}
+
+.body-template:hover {
+    animation-duration: 2s;
+    animation-name: changewidth;
+    animation-iteration-count: infinite;
+    /* animation-direction: alternate; */
+}
+
+@keyframes changewidth {
+    from {
+        background-position: left;
+    }
+
+    to {
+        background-position: right;
+    }
+}
