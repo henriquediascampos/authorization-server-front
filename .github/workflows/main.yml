@@ -1,0 +1,41 @@
+name: CI
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: build
+        run: echo build project
+        
+  deploy-dev:
+    runs-on: ubuntu-latest
+    environment:
+      name: dev
+      url: 'mycloud.com/ambiente-dev'
+    needs: build
+    steps:
+      - name: deploy dev
+        run: echo Deploy dev
+        
+  deploy-hml:
+    runs-on: ubuntu-latest
+    environment:
+      name: hml
+      url: 'mycloud.com/ambiente-hml'
+    needs: deploy-dev
+    steps:
+      - name: deploy hml
+        run: echo Deploy hml
+        
+  deploy-prod:
+    runs-on: ubuntu-latest
+    environment:
+      name: prod
+      url: 'mycloud.com/ambiente-prod'
+    needs: deploy-hml
+    steps:
+      - name: deploy prod
+        run: echo Deploy prod        
+        
